@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>
+		Вычисление суммы положительных членов массива.
+	</title>
+</head>
+<body>
+<script>
+var summ = 0;
+var a = new Array(10);
+
+	for(let i = 0; i < a.length;i++) {
+		let k = Number(prompt("Введите необходимые элементы массива: "));
+		if (parseFloat(k)) {
+		a[i] = k;	
+		} else {
+			alert('Введите число. Возврат к началу');
+			location.reload();
+		}
+		
+		
+	}
+	for(let i = 0; i < a.length;i++) {
+		if (a[i]>0)
+			summ += a[i];
+		
+	}
+	alert("Результат - "+summ);
+</script>
+</body>
+</html>
